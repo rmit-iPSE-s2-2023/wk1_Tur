@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let diceNumber = Int.random(in: 1...6)
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack(alignment: .center, spacing: 20.0) {
+            Image("dice-\(diceNumber)")
+            Text("The random number is \(diceNumber)")
         }
         .padding()
     }
